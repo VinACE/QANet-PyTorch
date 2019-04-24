@@ -67,9 +67,10 @@ parser.add_argument(
     help='number of batches for evaluation (default: 500)')
 
 # embedding
+# default=data_folder + 'original/Glove/glove.840B.300d.txt',
 parser.add_argument(
     '--glove_word_file',
-    default=data_folder + 'original/Glove/glove.840B.300d.txt',
+    default=data_folder + 'original/Glove/glove.6B.100d.txt',
     type=str, help='path of word embedding file')
 parser.add_argument(
     '--glove_word_size',
@@ -77,7 +78,7 @@ parser.add_argument(
     help='Corpus size for Glove')
 parser.add_argument(
     '--glove_dim',
-    default=300, type=int,
+    default=100, type=int,
     help='word embedding size (default: 300)')
 parser.add_argument(
     '--word_emb_file',
