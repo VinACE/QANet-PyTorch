@@ -21,7 +21,7 @@ from util.file_utils import pickle_load_large_file
 
 
 # data_folder = "../../../datasets/"
-data_folder = "./datasets/"
+data_folder = "/content/datasets/"
 parser = argparse.ArgumentParser(description='Lucy')
 
 # dataset
