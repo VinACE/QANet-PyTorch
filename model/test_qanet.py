@@ -2,7 +2,8 @@ import math
 import numpy as np
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
+import torch.nn.functional as F 
+from .modules.cnn import DepthwiseSeparableConv
 # from .modules.cnn import DepthwiseSeparableConv
 # from .modules.attention import MultiHeadAttention
 # from .modules.position import PositionalEncoding
