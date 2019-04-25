@@ -18,7 +18,7 @@ from trainer.QANet_trainer import Trainer
 from util.visualize import Visualizer
 from model.modules.ema import EMA
 from util.file_utils import pickle_load_large_file
-import ipdb
+import pdb
 
 # data_folder = "../../../datasets/"
 data_folder = "/content/datasets/"
