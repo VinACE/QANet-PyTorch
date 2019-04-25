@@ -3,10 +3,10 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-# from .modules.cnn import DepthwiseSeparableConv
-# from .modules.attention import MultiHeadAttention
-# from .modules.position import PositionalEncoding
-from QANet import QANet
+from .modules.cnn import DepthwiseSeparableConv
+from .modules.attention import MultiHeadAttention
+from .modules.position import PositionalEncoding
+from model.QANet import QANet
 
 
 if __name__ == '__main__':
