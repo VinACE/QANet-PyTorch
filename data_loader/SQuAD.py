@@ -14,7 +14,7 @@ from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
 from .config import *
 from util.file_utils import pickle_dump_large_file, pickle_load_large_file
-
+import pdb
 
 NLP = spacy.blank("en")
 
@@ -371,6 +371,7 @@ class SQuAD(Dataset):
         return self.num
 
     def __getitem__(self, idx):
+        pdb.set_trace()
         return (self.examples[idx]["context_wids"],
                 self.examples[idx]["context_cids"],
                 self.examples[idx]["question_wids"],
@@ -381,6 +382,7 @@ class SQuAD(Dataset):
                 self.examples[idx]["y2s"],
                 self.examples[idx]["id"],
                 self.examples[idx]["answerable"])
+                
 
 
 def collate(data):
