@@ -8,7 +8,9 @@ from .modules.attention import MultiHeadAttention
 from .modules.position import PositionalEncoding
 from QANet import QANet
 
-model = QANet(
+
+if __name__ == '__main__':
+    model = QANet(
     wv_tensor,
     cv_tensor,
     args.para_limit,
@@ -17,6 +19,5 @@ model = QANet(
     num_head=args.num_head,
     train_cemb=(not args.pretrained_char),
     pad=wv_word2ix["<PAD>"])
-model.summary()
-
-
+    model.summary()
+    print(model.summary())
