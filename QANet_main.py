@@ -18,7 +18,7 @@ from trainer.QANet_trainer import Trainer
 from util.visualize import Visualizer
 from model.modules.ema import EMA
 from util.file_utils import pickle_load_large_file
-
+import ipdb
 
 # data_folder = "../../../datasets/"
 data_folder = "/content/datasets/"
@@ -299,6 +299,8 @@ def main(args):
         train_cemb=(not args.pretrained_char),
         pad=wv_word2ix["<PAD>"])
     model.summary()
+    pdb.set_trace()
+    print(model.summary)
     if torch.cuda.device_count() > 1 and args.multi_gpu:
         model = nn.DataParallel(model)
     model.to(device)
