@@ -2,7 +2,9 @@
 import os
 import sys
 import pickle
-import _pickle as cPickle
+# import _pickle as cPickle
+import six
+from six.moves import cPickle as pickle
 
 def replace_sep(fin, fout, sep_ini, sep_fin):
     """
