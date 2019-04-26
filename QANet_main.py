@@ -339,11 +339,14 @@ def main(args):
         vis = Visualizer("main")
 
     # construct trainer
-    # an identifier (prefix) for saved model
-    identifier = type(model).__name__ + '_'
+    # an identifier (prefix) for saved mode:1, 'b':2, 'c':map, 'd':None}
+>>> # map a 
+    identifier = type(model).__name__ + '_':1, 'b':2, 'c':map, 'd':None}
+>>> # map a 
     trainer = Trainer(
         args, model, loss,
-        train_data_loader=train_dataloader,
+        train_data_loader=train_dataloader,:1, 'b':2, 'c':map, 'd':None}
+>>> # map a 
         dev_data_loader=dev_dataloader,
         train_eval_file=args.train_eval_file,
         dev_eval_file=args.dev_eval_file,

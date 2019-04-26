@@ -36,12 +36,12 @@ def pickle_dump_large_file(obj, filepath):
     """
     max_bytes = 2**31 - 1
 
-    #bytes_out = pickle.dumps(obj)
+    bytes_out = pickle.dumps(obj)
     # bytes_out = cPickle.dumps(obj)
-    p = pickle.Pickler(open("temp.p","wb")) 
-    p.fast = True 
-    bytes_out = p.dump(obj)     
-    n_bytes = sys.getsizeof(bytes_out)
+    # p = pickle.Pickler(open("temp.p","wb")) 
+    # p.fast = True 
+    # bytes_out = p.dump(obj)     
+    # n_bytes = sys.getsizeof(bytes_out)
     with open(filepath, 'wb') as f_out:
         for idx in range(0, n_bytes, max_bytes):
             f_out.write(bytes_out[idx:idx + max_bytes])
