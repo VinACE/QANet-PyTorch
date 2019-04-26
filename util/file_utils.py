@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-# import pickle
+import pickle
 # import _pickle as cPickle
-import cPickle as pickle
+# import cPickle as pickle
 def replace_sep(fin, fout, sep_ini, sep_fin):
     """
     Replace delimiter in a file.
