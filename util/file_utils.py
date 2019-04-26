@@ -2,7 +2,7 @@
 import os
 import sys
 import pickle
-import cPickle
+import _pickle as cPickle
 
 def replace_sep(fin, fout, sep_ini, sep_fin):
     """
